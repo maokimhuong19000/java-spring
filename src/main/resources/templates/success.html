@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+
+<head th:replace="~{base::head}">
+
+</head>
+
+<body>
+	<!-- Navbar Start -->
+	<div th:replace="~{base::navbar}"></div>
+	<!-- Navbar End -->
+	<!-- Page Header Start -->
+	<div th:replace="~{base::header(text='Success')}"></div>
+	<!-- Page Header End -->
+	<!-- About Start -->
+<div class="container-fluid py-5">
+		<div class="container">
+			<div class="section-title">
+				<h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Success</h4>
+				<h1 class="display-4">Success Booking!</h1>
+				<!-- Display individual properties of the booked object -->
+				<h2>Booking Information:</h2>
+				<p style="text-align: left; padding-left: 405px;">
+					<strong>ID:</strong> <span th:text="${booked.id}"></span>
+				</p>
+				<p style="text-align: left; padding-left: 405px; font-size: 24px;">
+					<strong>Name:</strong> <span th:text="${booked.name}"></span>
+				</p>
+				<p style="text-align: left; padding-left: 405px; font-size: 24px;">
+					<strong>Phone:</strong> <span th:text="${booked.phoneNumber}"></span>
+				</p>
+				<p style="text-align: left; padding-left: 405px; font-size: 24px;">
+					<strong>Email:</strong> <span th:text="${booked.email}"></span>
+				</p>
+				<p style="text-align: left; padding-left: 405px; font-size: 24px;">
+					<strong>Date:</strong> <span th:text="${booked.date}"></span>
+				</p>
+				<p style="text-align: left; padding-left: 405px; font-size: 24px;">
+					<strong>Time:</strong> <span th:text="${booked.time}"></span>
+				</p>
+				<p style="text-align: left; padding-left: 405px; font-size: 24px;">
+					<strong>Guests:</strong> <span th:text="${booked.person}"></span>
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 py-0 py-lg-5">
+					<!-- Additional content if needed -->
+				</div>
+				<div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
+					<div class="position-relative h-100">
+						<img class="position-absolute w-100 h-100" src="img/about.png"
+							style="object-fit: cover;">
+					</div>
+				</div>
+				<div class="col-lg-4 py-0 py-lg-5">
+					<!-- Additional content if needed -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About End -->
+	<!-- Footer Start -->
+	<div th:replace="~{base::footer}"></div>
+	<!-- Footer End -->
+	<!-- Back to Top -->
+	<div th:replace="~{base::mylib}"></div>
+</body>
+
+</html>
